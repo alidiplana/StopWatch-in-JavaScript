@@ -100,13 +100,11 @@ function splitWatch(){
     if(splits.length == 0){
         let newSW = new StopWatch(sw.nanoSeconds, sw.miliSeconds, sw.seconds, sw.minutes, sw.hours, status);
         splits.push(newSW);
-        // splits.push(newSW);
         console.log("Hours: "+tempHours);
         console.log("Minutes: "+tempMinutes);
         console.log("Seconds: "+ tempSeconds);
         console.log("MiliSeconds: " + tempMiliSeconds);
         console.log("NanoSeconds: "+ tempNanoSeconds);
-        // console.log(splits.length);
     }
     else{
 
@@ -160,9 +158,6 @@ function splitWatch(){
     }
     
     
-    // console.log(26-49);
-    // console.log('split');
-    // console.log(splits);
     var table = document.getElementById('myTable')
     table.innerHTML = "";
     for (var i = 0; i < splits.length; i++){

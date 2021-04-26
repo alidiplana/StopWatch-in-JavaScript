@@ -1,11 +1,6 @@
 .container{
-    /* height: 300px;
-    width: 100%; */
-    /* margin-left: 40%; */
     display: flex;
-    
     text-align: center;
-    /* justify-content: space-around; */
 }
 
 
@@ -16,11 +11,7 @@
 
 
 #display{
-    /* width: 100%; */
-    font-size: 100px;
-    /* text-align: center; */
-    /* margin: 0px auto; */
-    
+    font-size: 100px;    
 }
 
 .split{
@@ -29,33 +20,16 @@
     justify-content: space-around;
 }
 
-/* .buttons{ */
-
-     /* text-align: center;  */
-    /* margin-left: 40%; */
-    
-/* } */
-
 .buttons-style{
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    /* border: 1px solid red; */
-    /* height: 25px;
-    width: 25px; */
-    /* background-color: green; */
-    /* border-radius: 50%;
-    display: inline-block; */
-
     background-color: #40df42;
     border: none;
     color: white;
-    /* padding: 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 16px; */
-    /* margin: 4px 2px; */
 }
 
 .buttons-style-2{
@@ -64,10 +38,8 @@
     width: 80px;
     border-radius: 50%;
 
-    /* background-color: #40df42; */
     border: none;
     color: white;
-    /* padding: 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -80,10 +52,8 @@
     width: 80px;
     border-radius: 50%;
 
-    /* background-color: #40df42; */
     border: none;
     color: white;
-    /* padding: 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -96,10 +66,8 @@
     width: 80px;
     border-radius: 50%;
 
-    /* background-color: #40df42; */
     border: none;
     color: white;
-    /* padding: 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
