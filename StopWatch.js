@@ -21,7 +21,7 @@ let splits = [];
 
 let status = false;
 
-function stopWatch() {
+const stopWatch = () => {
   sw.seconds++;
 
   if (sw.seconds / 60 == 1) {
@@ -44,9 +44,9 @@ function stopWatch() {
   document.getElementById("nano").innerHTML = +(sw.nanoSeconds < 10
     ? "0" + sw.nanoSeconds
     : sw.nanoSeconds);
-}
+};
 
-function miliSecondsFunction() {
+const miliSecondsHandler = () => {
   sw.miliSeconds++;
   if (sw.miliSeconds / 10 == 1) {
     sw.miliSeconds = 0;
@@ -62,8 +62,8 @@ function miliSecondsFunction() {
   document.getElementById("nano").innerHTML = +(sw.nanoSeconds < 10
     ? "0" + sw.nanoSeconds
     : sw.nanoSeconds);
-}
-function nanoSecondsFunction() {
+};
+const nanoSecondsHandler = () => {
   sw.nanoSeconds++;
   if (sw.nanoSeconds / 100 == 1) {
     sw.nanoSeconds = 0;
@@ -79,18 +79,18 @@ function nanoSecondsFunction() {
   document.getElementById("nano").innerHTML = +(sw.nanoSeconds < 10
     ? "0" + sw.nanoSeconds
     : sw.nanoSeconds);
-}
+};
 
-function startWatch() {
+const startWatch = () => {
   if (status == false) {
-    nanoInterval = window.setInterval(nanoSecondsFunction, 10);
-    miliInterval = window.setInterval(miliSecondsFunction, 100);
+    nanoInterval = window.setInterval(nanoSecondsHandler, 10);
+    miliInterval = window.setInterval(miliSecondsHandler, 100);
     interval = window.setInterval(stopWatch, 1000);
     status = true;
   }
-}
+};
 
-function pauseWatch() {
+const pauseWatch = () => {
   if (status == true) {
     window.clearInterval(interval);
     window.clearInterval(miliInterval);
@@ -109,9 +109,9 @@ function pauseWatch() {
       : sw.nanoSeconds);
     status = false;
   }
-}
+};
 
-function resetWatch() {
+const resetWatch = () => {
   sw.nanoSeconds = 0;
   sw.miliSeconds = 0;
   sw.seconds = 0;
@@ -130,9 +130,9 @@ function resetWatch() {
   document.getElementById("nano").innerHTML = +(sw.nanoSeconds < 10
     ? "0" + sw.nanoSeconds
     : sw.nanoSeconds);
-}
+};
 
-function splitWatch() {
+const splitWatch = () => {
   var tempHours = 0;
   var tempMiliSeconds = 0;
   var tempMinutes = 0;
@@ -149,11 +149,6 @@ function splitWatch() {
       status
     );
     splits.push(newSW);
-    console.log("Hours: " + tempHours);
-    console.log("Minutes: " + tempMinutes);
-    console.log("Seconds: " + tempSeconds);
-    console.log("MiliSeconds: " + tempMiliSeconds);
-    console.log("NanoSeconds: " + tempNanoSeconds);
   } else {
     if (sw.hours - splits[splits.length - 1].hours < 0) {
       tempHours = sw.hours - splits[splits.length - 1].hours;
@@ -234,4 +229,4 @@ function splitWatch() {
                 </tr>`;
     table.innerHTML += row;
   }
-}
+};
