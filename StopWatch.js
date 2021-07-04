@@ -133,11 +133,11 @@ const resetWatch = () => {
 };
 
 const splitWatch = () => {
-  var tempHours = 0;
-  var tempMiliSeconds = 0;
-  var tempMinutes = 0;
-  var tempSeconds = 0;
-  var tempNanoSeconds = 0;
+  let tempHours = 0;
+  let tempMiliSeconds = 0;
+  let tempMinutes = 0;
+  let tempSeconds = 0;
+  let tempNanoSeconds = 0;
 
   if (splits.length == 0) {
     let newSW = new StopWatch(
@@ -202,10 +202,10 @@ const splitWatch = () => {
     console.log("NanoSeconds: " + tempNanoSeconds);
   }
 
-  var table = document.getElementById("myTable");
+  let table = document.getElementById("myTable");
   table.innerHTML = "";
-  for (var i = 0; i < splits.length; i++) {
-    var row = `<tr>
+  for (let i = 0; i < splits.length; i++) {
+    let row = `<tr>
                       <td>${i + 1}</td>
                       <td>${
                         (splits[i].hours < 10
